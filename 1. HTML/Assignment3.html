@@ -1,0 +1,23 @@
+<!--Use Drag and Drop API and show the working.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        #div1 {
+          width: 350px;
+          height: 300px;
+          padding: 10px;
+          border: 1px solid #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <img id="drag1" src="./Images/CSS_ICON.png" draggable="true" ondragstart="drag(event)" alt=" ">
+<script src="./JavaScripts/Assignment3.js"></script>
+</body>
+</html>

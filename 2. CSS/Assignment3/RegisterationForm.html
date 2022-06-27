@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <form action="Success.html">
+        <table border="1">
+            <caption></caption>
+            <tr>
+                <th colspan="2">Employee Details</th>
+            </tr>
+            <tr>
+                <td>Employee ID:</td>
+                <td><input type="number" min="10001" max="15000" required></td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" minlength="3" maxlength="15" required placeholder="First Name"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" required minlength="5" maxlength="25"></td>
+            </tr>
+            <tr>
+                <td>Departments:</td>
+                <td><input type="radio" name="p1" required>IT <br>
+                    <input type="radio" name="p1" required>HR <br>
+                    <input type="radio" name="p1" required>Finance <br>
+                    <input type="radio" name="p1" required>Admin
+                </td>
+            </tr>
+            <tr>
+
+                <td>Date of Joining</td>
+                <td><input id="datefield" type='date' min='1899-01-01' max='2000-13-13' required></td>
+                <script type='text/javascript'>
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth()+1; 
+                    var yyyy = today.getFullYear();
+                     if(dd<10){
+                            dd='0'+dd
+                        }
+                        if(mm<10){
+                            mm='0'+mm
+                        }
+                    today = yyyy+'-'+mm+'-'+dd;
+                    document.getElementById("datefield").setAttribute("max", today);
+                      </script>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" required></td>
+            </tr>
+            <tr>
+                <td>Contact No.:</td>
+                <td><input type="text" minlength="10" maxlength="10"pattern="[1-9]{1}[0-9]{9}">
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea style="height: 200px; width:180px" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Training Programs to be attained <br></td>
+                <td><input type="checkbox">Web Basics<br>
+                    <input type="checkbox">C#<br>
+                    <input type="checkbox">Entity Framework<br>
+                    <input type="checkbox">ASP.NET MVC
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="buttonid">Register</button>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
